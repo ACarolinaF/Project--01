@@ -10,10 +10,10 @@ function App() {
   return (
     <React.Fragment>
       <Routes>
+        {/* <div>It Renderizes in every Route</div> */}
         <Route path='/home' element={<Home/>}/>
         {/* <Route path='*' element={<Page404/>}/> */}
       </Routes>
-
     </React.Fragment>
   );
 }
