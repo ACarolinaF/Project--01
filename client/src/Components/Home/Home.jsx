@@ -19,6 +19,8 @@ export default function Home ({name}){
             Then all the home:
             this is home
              - {name}
+
+
         </div>
     )
 }
