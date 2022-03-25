@@ -41,22 +41,23 @@ export default function CreateUser() {
             <form onSubmit={(e)=>handleSubmit(e)}>
                 <div>
                     <label>Name</label>
-                    <input type='text' id='name' value={input.name} onChange={(e)=>handleChange(e)}/>
+                    <input type="text" id="name" name="name"
+                        value={input.name} onChange={(e)=> handleChange(e)}/>
                 </div>
 
                 <div>
                     <label>Last Name</label>
-                    <input type='text' id='lastName' value={input.lastName} onChange={(e)=>handleChange(e)}/>
+                    <input type='text' id='lastName' name="lastName" value={input.lastName} onChange={(e)=>handleChange(e)}/>
                 </div>
 
                 <div>
                     <label>Age</label>
-                    <input type='text' id='age' value={input.age} onChange={(e)=>handleChange(e)}/>
+                    <input type='text' id='age' name="age" value={input.age} onChange={(e)=>handleChange(e)}/>
                 </div>
 
                 <div>
                     <label>City</label>
-                    <input type='text' id='city' value={input.city} onChange={(e)=>handleChange(e)}/>
+                    <input type='text' id='city' name="city" value={input.city} onChange={(e)=>handleChange(e)}/>
                 </div>
 
                 <input type='submit' value='CREATE'/>
