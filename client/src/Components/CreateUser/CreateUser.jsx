@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { createUser } from "../../Redux/actions";
 
 
 import NavBar from "../NavBar/NavBar";
@@ -21,9 +23,18 @@ export default function CreateUser() {
         )
     }
 
+    let dispatch = useDispatch();
+
     let handleSubmit = (e) =>{
         e.preventDefault();
-        //dispatch de uma ação que me encha o estado global dessa informação
+
+        //primeiro dispatch de uma ação que me encha o estado global dessa informação
+        //quando faço submit faço dispatch de uma ação que ativa um case do reducer 
+            //que adiciona este novo objeto (input) ao estado global users
+        dispatch(
+            createUser(input)
+        )
+
         setInput({
             name:'',
             lastName:'',
